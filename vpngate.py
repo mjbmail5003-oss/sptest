@@ -51,7 +51,7 @@ VPNGATE_MIRROR = os.environ.get(
     "https://raw.githubusercontent.com/fdciabdul/Vpngate-Scraper-API/main/json/data.json",
 )
 # 已部署的 Cloudflare Worker 检测接口 (GET /check?proxyip=host:port, 实测确认)
-WORKER_CHECK_URL = os.environ.get("CHECK_WORKER", "https://check.helei.kdns.fr/check?sstp=vpn:vpn@")
+WORKER_CHECK_URL = os.environ.get("CHECK_WORKER", "https://sptest.mjbmail5003.workers.dev/check?sstp=vpn:vpn@")
 CONCURRENCY = max(1, int(os.environ.get("CHECK_CONCURRENCY", "32")))   # 与 Worker 网页端一致的并发模型
 CHECK_TIMEOUT = float(os.environ.get("CHECK_TIMEOUT", "90"))          # 单请求客户端超时 (秒)
 MAX_CHECK_NODES = int(os.environ.get("MAX_CHECK_NODES", "0"))         # 0=不限; 本地测试可设小值
@@ -460,8 +460,8 @@ EDGE_HOSTS = [
     h.strip()
     for h in os.environ.get(
         "EDGE_HOSTS",
-        "saas.072159.xyz:443,hzytjy.cn:443,ali.nonull.pp.ua:443,auto.dolby.dpdns.org:443,"
-        "cdn.cnno.de:443,saas.sin.fan:443,cf.777791.xyz:443",
+        "www.whoer.net:443,www.applevis.com:443,cdnjs.loli.net:443,www.canadatype.com:443,ali.nonull.pp.ua:443,www.dwk.com:443,ping.pe:443,www.nomios.com:443,worldvectorlogo.com:443,cdn.ddeed.de:443,jellyfin.roddy.eu.cc:443,cdn.cnno.de:443,elegantthemes.com:443,grass.io:443,www.ox.ac.uk:443,kali.download:443,scalacube.com:443,www.npmjs.com:443,www.whatismyip.com:443,bitsight.com:443,www.giannidelprete.it:443,snipaste1.speedip.eu.org:443,cdnjs.com:443,cnllm.com:443,hzytjy.cn:443,dev.graco.com:443,investorrelations.medtronic.com:443,01-cctv.com:443,www.dbs.com.sg:443,kniu.cc:443,a.pub.network:443,cdn.7zz.cn:443,cdn.sketch.com:443,alternativeto.net:443,leawo.org:443,m.iyf.tv:443,dash.domain.digitalplat.org:443,aftership.com:443,salaryexpert.com:443,videodelivery.net:443,smapi.xystem138.com:443,packtpub.com:443,dexari.com:443,mokeedev.com:443,cf2.996616.xyz:443,s.bookcdn.com:443,www.swowd.com:443,hentaiverse.org:443,syncfusion.com:443,www.mastervolt.com:443,clickhouse.com:443,www.acces-maroc.ma:443,w3.org:443,www.mfyx.cn:443"
+        "chrono24.com:443,www.broadcom.com:443",
     ).split(",")
     if h.strip()
 ]
